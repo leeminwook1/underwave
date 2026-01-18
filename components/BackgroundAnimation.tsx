@@ -30,8 +30,8 @@ export default function BackgroundAnimation() {
       opacity: number
 
       constructor() {
-        this.x = Math.random() * canvas.width
-        this.y = Math.random() * canvas.height
+        this.x = Math.random() * (canvas?.width || 0)
+        this.y = Math.random() * (canvas?.height || 0)
         this.size = Math.random() * 2 + 1
         this.speedX = Math.random() * 0.5 - 0.25
         this.speedY = Math.random() * 0.5 - 0.25
@@ -42,10 +42,10 @@ export default function BackgroundAnimation() {
         this.x += this.speedX
         this.y += this.speedY
 
-        if (this.x > canvas.width) this.x = 0
-        if (this.x < 0) this.x = canvas.width
-        if (this.y > canvas.height) this.y = 0
-        if (this.y < 0) this.y = canvas.height
+        if (canvas && this.x > canvas.width) this.x = 0
+        if (this.x < 0 && canvas) this.x = canvas.width
+        if (canvas && this.y > canvas.height) this.y = 0
+        if (this.y < 0 && canvas) this.y = canvas.height
       }
 
       draw() {
@@ -88,7 +88,7 @@ export default function BackgroundAnimation() {
 
     // Animation loop
     const animate = () => {
-      if (!ctx) return
+      if (!ctx || !canvas) return
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
       particlesArray.forEach((particle) => {

@@ -50,7 +50,7 @@ export default function Projects() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p className="text-sm md:text-base text-gray-700">마케팅 에이전시 UNDERWAVE(언더웨이브)의 '20대 트렌드 매거진'</p>
+                  <p className="text-sm md:text-base text-gray-700">마케팅 에이전시 UNDERWAVE(언더웨이브)의 &apos;20대 트렌드 매거진&apos;</p>
                 </div>
                 <div className="flex items-start bg-white p-3 md:p-4 rounded-xl">
                   <div className="w-5 h-5 md:w-6 md:h-6 bg-primary-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
@@ -126,14 +126,14 @@ export default function Projects() {
               <div className="max-w-4xl mx-auto">
                 <div className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 leading-relaxed text-center space-y-3 md:space-y-4">
                   <p className="flex items-start justify-center">
-                    <span className="text-3xl md:text-5xl text-primary-400 mr-1 md:mr-2">"</span>
+                    <span className="text-3xl md:text-5xl text-primary-400 mr-1 md:mr-2">&ldquo;</span>
                     <span>그랩은 지나가는 사람들의 이야기, 추억, 가치를 붙잡는다는 의미예요!</span>
                   </p>
                   <p>저희는 그랩유, 그랩잡, 그랩월로 나누었는데,</p>
                   <p>혹시 이게 뭔지 알 것 같으세요?</p>
                   <p className="flex items-end justify-center">
                     <span>본인은 어느 그랩인가요?</span>
-                    <span className="text-3xl md:text-5xl text-primary-400 ml-1 md:ml-2">"</span>
+                    <span className="text-3xl md:text-5xl text-primary-400 ml-1 md:ml-2">&rdquo;</span>
                   </p>
                 </div>
               </div>

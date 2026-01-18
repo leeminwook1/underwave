@@ -198,7 +198,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                  <p className="text-gray-700">마케팅 에이전시 UNDERWAVE의 '20대 트렌드 매거진'</p>
+                  <p className="text-gray-700">마케팅 에이전시 UNDERWAVE의 &apos;20대 트렌드 매거진&apos;</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
