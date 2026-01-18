@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Developer Portfolio | 개발자 포트폴리오',
-  description: '최신 기술 스택으로 구현한 현대적인 개발자 포트폴리오',
-  keywords: ['portfolio', 'developer', 'web development', 'React', 'Next.js'],
+  title: 'Underwave | 언더웨이브 - 20대 트렌드 마케팅 에이전시',
+  description: '20대 트렌드 매거진',
+  keywords: ['Underwave', '언더웨이브', 'GRAB', '그랩', '20대 트렌드', '마케팅 에이전시', '트렌드 매거진', '마케팅 컨설팅', 'SNS 마케팅', '브랜디드 콘텐츠'],
 }
 
 export default function RootLayout({
