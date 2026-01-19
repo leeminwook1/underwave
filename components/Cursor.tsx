@@ -34,7 +34,7 @@ export default function Cursor() {
       <motion.div
         className="fixed top-0 left-0 w-3 h-3 rounded-full pointer-events-none z-[9999]"
         style={{
-          backgroundColor: '#e04d88',
+          backgroundColor: '#3b82f6',
         }}
         animate={{
           x: mousePosition.x - 6,
@@ -53,8 +53,8 @@ export default function Cursor() {
       <motion.div
         className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9998]"
         style={{
-          border: '2px solid #f06ba0',
-          backgroundColor: 'rgba(240, 107, 160, 0.1)',
+          border: '2px solid #60a5fa',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)',
         }}
         animate={{
           x: mousePosition.x - 20,

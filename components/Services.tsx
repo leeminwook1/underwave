@@ -34,66 +34,65 @@ export default function Services() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-32"
         >
-          <div className="glass p-12 rounded-3xl">
+          <div className="glass p-12 rounded-3xl relative">
             <h3 className="text-2xl font-bold text-center mb-12 text-gray-800">Business Flow</h3>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 relative">
               {/* 기업 */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex-1"
+                className="relative z-10"
               >
-                <div className="relative">
-                  <div className="w-40 h-40 mx-auto border-4 border-primary-300 rounded-2xl flex items-center justify-center bg-white shadow-lg">
-                    <div className="text-center">
-                      <svg className="w-16 h-16 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                      <span className="text-xl font-bold text-gray-800">기업</span>
-                    </div>
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-primary-500/20 rounded-full blur-xl"></div>
+                <div className="w-40 h-40 border-4 border-blue-300 rounded-full flex items-center justify-center bg-white shadow-lg">
+                  <span className="text-2xl font-bold text-gray-800">기업</span>
                 </div>
               </motion.div>
 
-              {/* 화살표 */}
-              <div className="flex-1 text-center hidden md:block">
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">트렌드 리서치 제공</p>
-                  <svg className="w-full h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              {/* 기업 ↔ 언더웨이브 화살표 영역 */}
+              <div className="hidden md:flex flex-col items-center justify-center mx-2" style={{ width: '200px' }}>
+                <p className="text-xs text-gray-600 text-center mb-1 whitespace-nowrap">트렌드 리서치 제공</p>
+                <p className="text-xs text-gray-600 text-center mb-3 whitespace-nowrap">마케팅 대행 서비스 제공</p>
+                <div className="flex items-center justify-center mt-2 w-full">
+                  <svg className="w-5 h-5 text-gray-600 -mr-1 rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                  <p className="text-sm text-gray-600">마케팅 대행 서비스</p>
+                  <div className="flex-1 border-t-2 border-gray-400"></div>
                 </div>
+                <div className="flex items-center justify-center mb-2 w-full">
+                  <div className="flex-1 border-t-2 border-gray-400"></div>
+                  <svg className="w-5 h-5 text-gray-600 -ml-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <p className="text-xs text-gray-600 text-center mt-1 whitespace-nowrap">마케팅 대행 요청</p>
+                <p className="text-xs text-gray-600 text-center whitespace-nowrap">메가트렌드 리포트 요청</p>
               </div>
 
-              {/* Underwave */}
+              {/* Underwave - 둥근 사각형 */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex-1"
+                className="relative z-10"
               >
-                <div className="relative">
-                  <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary-500/90 to-primary-600/90 rounded-2xl flex items-center justify-center shadow-2xl">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-white mb-1">Underwave</div>
-                      <div className="text-sm text-white/90">언더웨이브</div>
-                    </div>
+                <div className="w-52 h-40 bg-gradient-to-br from-primary-500/90 to-primary-600/90 rounded-3xl flex items-center justify-center shadow-2xl">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-white mb-1">Underwave</div>
+                    <div className="text-sm text-white/90">언더웨이브</div>
                   </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-500/30 rounded-full blur-2xl"></div>
                 </div>
               </motion.div>
 
-              {/* 화살표 */}
-              <div className="flex-1 text-center hidden md:block">
-                <div className="space-y-2">
-                  <svg className="w-full h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              {/* 소비자 → 언더웨이브 화살표 */}
+              <div className="hidden md:flex flex-col items-center justify-center mx-2" style={{ width: '200px' }}>
+                <div className="flex items-center justify-center w-full">
+                  <svg className="w-5 h-5 text-gray-600 -mr-1 rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                  <p className="text-sm text-gray-600">마이크로 트렌드</p>
+                  <div className="flex-1 border-t-2 border-gray-400"></div>
                 </div>
+                <p className="text-xs text-gray-600 text-center mt-2 whitespace-nowrap">마이크로 트렌드</p>
               </div>
 
               {/* 소비자 */}
@@ -101,26 +100,30 @@ export default function Services() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex-1"
+                className="relative z-10"
               >
-                <div className="relative">
-                  <div className="w-40 h-40 mx-auto border-4 border-primary-300 rounded-2xl flex items-center justify-center bg-white shadow-lg">
-                    <div className="text-center">
-                      <svg className="w-16 h-16 mx-auto mb-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                      </svg>
-                      <span className="text-xl font-bold text-gray-800">소비자</span>
-                    </div>
-                  </div>
-                  <div className="absolute -top-2 -left-2 w-12 h-12 bg-primary-500/20 rounded-full blur-xl"></div>
+                <div className="w-40 h-40 border-4 border-blue-300 rounded-full flex items-center justify-center bg-white shadow-lg">
+                  <span className="text-2xl font-bold text-gray-800">소비자</span>
                 </div>
               </motion.div>
             </div>
 
-            {/* 하단 설명 */}
-            <div className="mt-12 text-center">
-              <div className="inline-block px-8 py-4 bg-gradient-to-r from-primary-50 to-pink-50 rounded-2xl border-2 border-primary-200">
-                <p className="text-gray-700 font-semibold">맞춤형 공감 마케팅 제공</p>
+            {/* 기업 → 소비자 하단 화살표 */}
+            <div className="hidden md:block relative mt-12">
+              <svg className="w-full mx-auto" style={{ height: '100px' }} viewBox="0 0 1000 100" preserveAspectRatio="xMidYMid meet">
+                {/* 기업 중심에서 아래로 */}
+                <line x1="100" y1="0" x2="100" y2="60" stroke="#9ca3af" strokeWidth="2"/>
+                {/* 가로선 */}
+                <line x1="100" y1="60" x2="900" y2="60" stroke="#9ca3af" strokeWidth="2"/>
+                {/* 소비자 중심으로 위로 */}
+                <line x1="900" y1="60" x2="900" y2="0" stroke="#9ca3af" strokeWidth="2"/>
+                {/* 화살표 */}
+                <polygon points="900,0 895,8 905,8" fill="#9ca3af"/>
+              </svg>
+              <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '45px' }}>
+                <div className="px-6 py-2 bg-white rounded-full border-2 border-primary-200 shadow-sm">
+                  <p className="text-xs text-gray-700 font-semibold whitespace-nowrap">맞춤형 공감 마케팅 제공</p>
+                </div>
               </div>
             </div>
           </div>
@@ -160,7 +163,7 @@ export default function Services() {
                   '브랜드 론칭 및 메시지 관리'
                 ],
                 highlight: '인사이트에서 실행까지 연결되는 실무형 수익원',
-                color: 'from-green-500 to-green-600'
+                color: 'from-blue-500 to-blue-600'
               },
               {
                 number: '03',
@@ -173,7 +176,7 @@ export default function Services() {
                   '연말 판매 또는 기업 구독형 모델'
                 ],
                 highlight: '현장감 있는 트렌드 데이터 자산화',
-                color: 'from-purple-500 to-purple-600'
+                color: 'from-blue-500 to-blue-600'
               },
               {
                 number: '04',
@@ -186,7 +189,7 @@ export default function Services() {
                   '브랜드 스토리텔링'
                 ],
                 highlight: '높은 신뢰도의 스토리 중심 콘텐츠',
-                color: 'from-pink-500 to-pink-600'
+                color: 'from-blue-500 to-blue-600'
               }
             ].map((item, index) => (
               <motion.div
@@ -237,52 +240,7 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* What we do 섹션 */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="glass p-12 rounded-3xl"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">How We Create Value</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-3">Who we are</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                20대 소비자의 실제 일상과 문화 데이터를 기반으로 트렌드를 분석하고 전략적 인사이트를 제공하는 마케팅 회사
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-3">What we do</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                마케팅·광고·홍보 컨설팅, 마케팅 대행 및 커뮤니케이션 전략 수립, 트렌드 리서치 리포트 제공
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-3">How we work</h4>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                자체 인스타그램 매거진 운영, 20대 자문단 서포터즈 운영, 실제 20대가 콘텐츠를 기획·제작
-              </p>
-            </div>
-          </div>
-        </motion.div>
+      
       </div>
     </section>
   )

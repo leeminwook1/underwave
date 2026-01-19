@@ -21,7 +21,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">GRAB (그랩)</span>
+            <span className="bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 bg-clip-text text-transparent">GRAB (그랩)</span>
           </h2>
         </motion.div>
 
@@ -34,9 +34,9 @@ export default function Projects() {
         >
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* 프로젝트 소개 */}
-            <div className="bg-gradient-to-br from-primary-50 to-white p-6 md:p-10 rounded-2xl md:rounded-3xl border-2 border-primary-100 shadow-lg">
+            <div className="bg-gradient-to-br from-pink-50 to-white p-6 md:p-10 rounded-2xl md:rounded-3xl border-2 border-pink-100 shadow-lg">
               <div className="flex items-center mb-4 md:mb-6">
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mr-3 md:mr-4 flex-shrink-0">
                   <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -45,7 +45,7 @@ export default function Projects() {
               </div>
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-start bg-white p-3 md:p-4 rounded-xl">
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-primary-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pink-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
                     <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -53,7 +53,7 @@ export default function Projects() {
                   <p className="text-sm md:text-base text-gray-700">마케팅 에이전시 UNDERWAVE(언더웨이브)의 &apos;20대 트렌드 매거진&apos;</p>
                 </div>
                 <div className="flex items-start bg-white p-3 md:p-4 rounded-xl">
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-primary-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pink-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
                     <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -61,7 +61,7 @@ export default function Projects() {
                   <p className="text-sm md:text-base text-gray-700">필터버블 탈피, 리얼 데이터 수집, 나노트렌드 조사</p>
                 </div>
                 <div className="flex items-start bg-white p-3 md:p-4 rounded-xl">
-                  <div className="w-5 h-5 md:w-6 md:h-6 bg-primary-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
+                  <div className="w-5 h-5 md:w-6 md:h-6 bg-pink-500 rounded-full flex items-center justify-center mr-2 md:mr-3 mt-0.5 flex-shrink-0">
                     <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -112,33 +112,6 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-12 md:mb-20"
         >
-          <div className="relative bg-gradient-to-br from-gray-50 to-white p-8 md:p-16 rounded-2xl md:rounded-3xl border-2 border-gray-100 shadow-xl overflow-hidden">
-            {/* 장식 요소 */}
-            <div className="absolute top-5 left-5 md:top-10 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-primary-200 rounded-full opacity-20"></div>
-            <div className="absolute bottom-5 right-5 md:bottom-10 md:right-10 w-20 h-20 md:w-32 md:h-32 bg-pink-200 rounded-full opacity-20"></div>
-            
-            <div className="relative z-10">
-              <div className="text-center mb-6 md:mb-8">
-                <span className="inline-block px-4 py-1.5 md:px-6 md:py-2 bg-gradient-to-r from-primary-100 to-pink-100 rounded-full text-primary-700 font-semibold text-sm md:text-base mb-4">
-                  GRAB 소개
-                </span>
-              </div>
-              <div className="max-w-4xl mx-auto">
-                <div className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-800 leading-relaxed text-center space-y-3 md:space-y-4">
-                  <p className="flex items-start justify-center">
-                    <span className="text-3xl md:text-5xl text-primary-400 mr-1 md:mr-2">&ldquo;</span>
-                    <span>그랩은 지나가는 사람들의 이야기, 추억, 가치를 붙잡는다는 의미예요!</span>
-                  </p>
-                  <p>저희는 그랩유, 그랩잡, 그랩월로 나누었는데,</p>
-                  <p>혹시 이게 뭔지 알 것 같으세요?</p>
-                  <p className="flex items-end justify-center">
-                    <span>본인은 어느 그랩인가요?</span>
-                    <span className="text-3xl md:text-5xl text-primary-400 ml-1 md:ml-2">&rdquo;</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </motion.div>
 
         {/* 3가지 GRAB 카테고리 - 깔끔한 디자인 */}
@@ -229,7 +202,7 @@ export default function Projects() {
               </div>
             </motion.div>
 
-            {/* 그랩월 */}
+            {/* 그랩웤 */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -252,7 +225,7 @@ export default function Projects() {
                 <div className="p-6 md:p-8">
                   <div className="text-center mb-4 md:mb-6">
                     <p className="text-amber-600 text-xs md:text-sm font-medium mb-2">Grab Work</p>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">그랩월</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">그랩웤</h3>
                     <div className="inline-block px-5 py-1.5 md:px-6 md:py-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full shadow-sm">
                       <span className="text-white font-bold text-base md:text-lg">직장인</span>
                     </div>
@@ -279,14 +252,14 @@ export default function Projects() {
           className="text-center"
         >
           <div className="glass p-6 md:p-8 rounded-2xl md:rounded-3xl max-w-2xl mx-auto">
-            <FaInstagram className="text-4xl md:text-5xl text-primary-500 mx-auto mb-3 md:mb-4" />
+            <FaInstagram className="text-4xl md:text-5xl text-pink-500 mx-auto mb-3 md:mb-4" />
             <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">GRAB 인스타그램</h3>
             <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">20대의 진짜 이야기를 만나보세요</p>
             <a
               href="https://www.instagram.com/grab_mag"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 md:space-x-3 px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white rounded-full font-semibold text-lg md:text-xl hover:shadow-2xl transition-all"
+              className="inline-flex items-center space-x-2 md:space-x-3 px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-pink-500/90 to-pink-600/90 text-white rounded-full font-semibold text-lg md:text-xl hover:shadow-2xl transition-all"
             >
               <FaInstagram className="text-xl md:text-2xl" />
               <span>@grab_mag 방문하기</span>

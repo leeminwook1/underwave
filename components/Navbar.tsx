@@ -41,7 +41,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass shadow-lg py-4' : 'bg-white/80 backdrop-blur-sm py-6'
+        scrolled ? 'glass shadow-lg py-2' : 'bg-white/80 backdrop-blur-sm py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,11 +49,15 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           {/* Logo */}
           <motion.button
             onClick={() => handleTabClick('home')}
-            className="text-2xl font-bold gradient-text"
+            className="flex items-center mt-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Underwave
+            <img 
+              src="/images/logo.png" 
+              alt="Underwave Logo" 
+              className="h-10 md:h-12 w-auto scale-[3]"
+            />
           </motion.button>
 
           {/* Desktop Menu */}

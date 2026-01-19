@@ -10,7 +10,7 @@ export default function Mission() {
   })
 
   return (
-    <section className="py-12 md:py-20 relative bg-gradient-to-br from-white via-pink-50/20 to-white min-h-screen pt-24 md:pt-32">
+    <section className="py-12 md:py-20 relative bg-gradient-to-br from-white via-blue-50/20 to-white min-h-screen pt-24 md:pt-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -51,6 +51,45 @@ export default function Mission() {
               >
                 급변하는 흐름 속에서<br/>사람들이 쉽게 놓치는 일상과 문화를 발견합니다
               </motion.h3>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 대표님 소개 */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-16 md:mb-32"
+        >
+          <h3 className="text-3xl font-bold mb-8 text-center text-primary-600">대표님 소개</h3>
+          <div className="glass p-8 md:p-12 rounded-3xl">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-80 h-80 bg-gradient-to-br from-primary-100/60 to-primary-200/60 rounded-2xl overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" 
+                      alt="CEO" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl"></div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-2xl font-bold mb-4 text-primary-600">약력</h4>
+                <div className="space-y-3 text-gray-700">
+                  <p>• 서울대학교 사회학 학사</p>
+                  <p>• University of Oxford (영국) MSc / MPhil Social Anthropology 석사</p>
+                  <p>• Kundle & Co (덴마크 마케팅 에이전시 컨설팅 코)</p>
+                </div>
+                <h4 className="text-2xl font-bold mt-8 mb-4 text-primary-600">프로젝트</h4>
+                <div className="space-y-3 text-gray-700">
+                  <p>• IKEA &lt;Life at Home Report&gt;</p>
+                  <p className="text-sm text-gray-600 ml-4">(이케아 글로벌 라이프스타일 리서치 프로젝트)</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -212,7 +251,7 @@ export default function Mission() {
                 icon: 'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
                 title: 'Passion', 
                 desc: '열정과 진정성',
-                color: 'from-pink-400 to-pink-600'
+                color: 'from-blue-400 to-blue-600'
               }
             ].map((value, index) => (
               <motion.div

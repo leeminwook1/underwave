@@ -19,9 +19,9 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
 
   const features = [
     {
-      icon: FaChartLine,
-      title: '트렌드 분석',
-      description: '20대 실제 데이터 기반 트렌드 리서치'
+      icon: FaLightbulb,
+      title: '전략 컨설팅',
+      description: '브랜드 방향성 및 커뮤니케이션 전략'
     },
     {
       icon: FaUsers,
@@ -29,9 +29,9 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
       description: 'SNS 콘텐츠 기획 및 캠페인 운영'
     },
     {
-      icon: FaLightbulb,
-      title: '전략 컨설팅',
-      description: '브랜드 방향성 및 커뮤니케이션 전략'
+      icon: FaChartLine,
+      title: '트렌드 분석',
+      description: '20대 실제 데이터 기반 트렌드 리서치'
     }
   ]
 
@@ -45,7 +45,17 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
   return (
     <div className="relative bg-white">
       {/* Section 1: Hero */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-to-br from-white via-pink-50/30 to-white pt-16 md:pt-20">
+      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16 md:pt-20">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/main.jpg" 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-blue-50/40 to-white/60"></div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
           <div className="text-center">
             {/* Logo/Brand */}
@@ -160,7 +170,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
       </section>
 
       {/* Section 3: GRAB Project */}
-      <section ref={ref2} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-pink-50/20 to-white">
+      <section ref={ref2} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -279,7 +289,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
       </section>
 
       {/* Section 5: Stats */}
-      <section ref={ref4} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-pink-50/20 to-white">
+      <section ref={ref4} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

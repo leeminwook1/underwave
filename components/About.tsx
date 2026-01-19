@@ -156,8 +156,8 @@ export default function About() {
               </div>
               
               {/* 4개 부서 */}
-              <div className="grid md:grid-cols-4 gap-6 w-full">
-                <div className="glass p-6 rounded-xl border-2 border-primary-200">
+              <div className="grid md:grid-cols-4 gap-6 w-full mb-8">
+                <div className="glass p-6 rounded-xl border-2 border-primary-200 relative">
                   <h4 className="font-bold text-primary-600 mb-4 text-center">Strategy & Research Division</h4>
                   <p className="text-sm text-gray-600 text-center mb-4">트렌드 전략 분석</p>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -165,9 +165,11 @@ export default function About() {
                     <li>• Market Research Analyst</li>
                     <li>• Industry Insight Planner</li>
                   </ul>
+                  {/* 연결선 */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-primary-300 hidden md:block"></div>
                 </div>
                 
-                <div className="glass p-6 rounded-xl border-2 border-primary-200">
+                <div className="glass p-6 rounded-xl border-2 border-primary-200 relative">
                   <h4 className="font-bold text-primary-600 mb-4 text-center">Content & Media Division</h4>
                   <p className="text-sm text-gray-600 text-center mb-4">콘텐츠 미디어 분석</p>
                   <ul className="text-sm text-gray-700 space-y-2">
@@ -176,6 +178,8 @@ export default function About() {
                     <li>• Visual Designer / Video Editor</li>
                     <li>• SNS Channel Manager</li>
                   </ul>
+                  {/* 연결선 */}
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full h-8 w-0.5 bg-primary-300 hidden md:block"></div>
                 </div>
                 
                 <div className="glass p-6 rounded-xl border-2 border-primary-200">
@@ -199,53 +203,16 @@ export default function About() {
                 </div>
               </div>
 
-              {/* 하위 팀 */}
-              <div className="grid md:grid-cols-2 gap-6 mt-8 w-full max-w-2xl">
+              {/* 하위 팀 - 첫 번째와 두 번째 부서 아래에 배치 */}
+              <div className="grid md:grid-cols-4 gap-6 w-full">
                 <div className="bg-primary-100 px-6 py-3 rounded-xl text-center font-semibold text-primary-700">
                   Mega Trend Research<br/>메가 트렌드 팀
                 </div>
                 <div className="bg-primary-100 px-6 py-3 rounded-xl text-center font-semibold text-primary-700">
                   Micro Trend Research<br/>마이크로 트렌드 팀
                 </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* CEO 소개 */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold mb-8 text-center text-primary-600">대표님 소개</h3>
-          <div className="glass p-8 md:p-12 rounded-3xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-gradient-to-br from-primary-100/60 to-primary-200/60 rounded-2xl overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" 
-                      alt="CEO" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl"></div>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-4 text-primary-600">약력</h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>• 서울대학교 사회학 학사</p>
-                  <p>• University of Oxford (영국) MSc / MPhil Social Anthropology 석사</p>
-                  <p>• Kundle & Co (덴마크 마케팅 에이전시 컨설팅 코)</p>
-                </div>
-                <h4 className="text-2xl font-bold mt-8 mb-4 text-primary-600">프로젝트</h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>• IKEA &lt;Life at Home Report&gt;</p>
-                  <p className="text-sm text-gray-600 ml-4">(이케아 글로벌 라이프스타일 리서치 프로젝트)</p>
-                </div>
+                <div></div>
+                <div></div>
               </div>
             </div>
           </div>

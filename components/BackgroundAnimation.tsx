@@ -50,7 +50,7 @@ export default function BackgroundAnimation() {
 
       draw() {
         if (!ctx) return
-        ctx.fillStyle = `rgba(14, 165, 233, ${this.opacity})`
+        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity})`
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -75,7 +75,7 @@ export default function BackgroundAnimation() {
           const distance = Math.sqrt(dx * dx + dy * dy)
 
           if (distance < 150) {
-            ctx.strokeStyle = `rgba(14, 165, 233, ${0.1 * (1 - distance / 150)})`
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 150)})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y)
