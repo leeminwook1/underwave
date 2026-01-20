@@ -61,9 +61,9 @@ npm start
 
 ## 📱 연락처
 
-- Email: contact@underwave.com
-- Phone: +82 10-1234-5678
-- Location: Seoul, South Korea
+- Email: contact@underwave.kr
+- Phone: +82 10-8294-0378
+- 주소: 서울 강남구 테헤란로 419 삼성금융프라자
 
 ---
 

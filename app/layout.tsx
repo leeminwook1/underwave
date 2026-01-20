@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   keywords: ['Underwave', '언더웨이브', 'GRAB', '그랩', '20대 트렌드', '마케팅 에이전시', '트렌드 매거진', '마케팅 컨설팅', 'SNS 마케팅', '브랜디드 콘텐츠'],
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  viewportFit: 'cover',
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="scroll-smooth">
+      <head>
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      </head>
       <body className={`${inter.className} bg-gray-900 text-white antialiased`}>
         {children}
       </body>

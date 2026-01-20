@@ -13,8 +13,8 @@ export default function Footer({ activeTab, setActiveTab }: FooterProps) {
 
   const socialLinks = [
     { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-    { icon: FaEnvelope, href: 'mailto:contact@underwave.com', label: 'Email' },
-    { icon: FaPhone, href: 'tel:+821012345678', label: 'Phone' },
+    { icon: FaEnvelope, href: 'mailto:contact@underwave.kr', label: 'Email' },
+    { icon: FaPhone, href: 'tel:+821082940378', label: 'Phone' },
   ]
 
   const quickLinks = [
@@ -28,7 +28,10 @@ export default function Footer({ activeTab, setActiveTab }: FooterProps) {
 
   const handleLinkClick = (id: string) => {
     setActiveTab(id)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // 즉시 스크롤
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }, 0)
   }
 
   return (
@@ -92,9 +95,9 @@ export default function Footer({ activeTab, setActiveTab }: FooterProps) {
           <div>
             <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-gray-800">Contact</h4>
             <div className="space-y-1.5 md:space-y-2 text-gray-600 text-xs md:text-sm">
-              <p>Email: contact@underwave.com</p>
-              <p>Phone: +82 10-1234-5678</p>
-              <p>Location: Seoul, South Korea</p>
+              <p>Email: contact@underwave.kr</p>
+              <p>Phone: +82 10-8294-0378</p>
+              <p>주소: 서울 강남구 테헤란로 419 삼성금융프라자</p>
             </div>
           </div>
         </div>

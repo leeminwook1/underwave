@@ -6,8 +6,20 @@ import { motion } from 'framer-motion'
 export default function Cursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isPointer, setIsPointer] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    // 모바일 기기 체크
+    const checkMobile = () => {
+      setIsMobile(
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+        window.innerWidth < 768
+      )
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
       
@@ -25,8 +37,14 @@ export default function Cursor() {
 
     return () => {
       window.removeEventListener('mousemove', updateMousePosition)
+      window.removeEventListener('resize', checkMobile)
     }
   }, [])
+
+  // 모바일에서는 커서를 렌더링하지 않음
+  if (isMobile) {
+    return null
+  }
 
   return (
     <>

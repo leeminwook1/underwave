@@ -33,7 +33,10 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
   const handleTabClick = (id: string) => {
     setActiveTab(id)
     setIsOpen(false)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // 즉시 스크롤 (smooth 제거하여 더 빠른 반응)
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }, 0)
   }
 
   return (
@@ -49,7 +52,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
           {/* Logo */}
           <motion.button
             onClick={() => handleTabClick('home')}
-            className="flex items-center mt-2"
+            className="flex items-center mt-2 ml-2 md:ml-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

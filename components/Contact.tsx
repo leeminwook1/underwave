@@ -43,19 +43,19 @@ export default function Contact() {
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'contact@underwave.kr',
+      href: 'mailto:contact@underwave.kr',
     },
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+82 10-1234-5678',
-      href: 'tel:+821012345678',
+      value: '+82 10-8294-0378',
+      href: 'tel:+821082940378',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
-      value: 'Seoul, South Korea',
+      value: '서울 강남구 테헤란로 419 삼성금융프라자',
       href: '#',
     },
   ]
@@ -114,19 +114,36 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Map or Illustration */}
+            {/* Map */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-6 md:mt-8 glass p-4 md:p-6 rounded-xl md:rounded-2xl"
+              className="mt-6 md:mt-8"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center">
-                <p className="text-gray-700 text-center text-sm md:text-base">
-                  📍 Location Map
-                  <br />
-                  <span className="text-xs md:text-sm">Seoul, South Korea</span>
-                </p>
+              <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <div className="aspect-video w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.0267891234567!2d127.05891231531234!3d37.50876797981234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3f4c5555555%3A0x1234567890abcdef!2z7IKw7ISx6riI7Jyp7ZSE652866as7J6Q!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Underwave Location"
+                  ></iframe>
+                </div>
+                <div className="p-4 bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
+                  <div className="flex items-center justify-center space-x-2">
+                    <svg className="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    <p className="text-gray-800 text-sm md:text-base font-medium">
+                      서울 강남구 테헤란로 419 삼성금융프라자
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </motion.div>

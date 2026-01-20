@@ -62,32 +62,76 @@ export default function Mission() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16 md:mb-32"
         >
-          <h3 className="text-3xl font-bold mb-8 text-center text-primary-600">대표님 소개</h3>
-          <div className="glass p-8 md:p-12 rounded-3xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-gradient-to-br from-primary-100/60 to-primary-200/60 rounded-2xl overflow-hidden">
+          <div className="text-center mb-8 md:mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
+              <span className="gradient-text">대표님 소개</span>
+            </h3>
+            <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto"></div>
+          </div>
+          
+          <div className="bg-gradient-to-br from-gray-50 to-white p-6 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm">
+            <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+              {/* 왼쪽: 프로필 이미지 */}
+              <div className="md:col-span-2 flex flex-col items-center">
+                <div className="relative mb-4 md:mb-6">
+                  <div className="w-48 h-60 md:w-64 md:h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
                     <img 
                       src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" 
                       alt="CEO" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl"></div>
+                  {/* 장식 요소 */}
+                  <div className="absolute -top-2 -left-2 md:-top-3 md:-left-3 w-4 h-4 md:w-6 md:h-6 bg-primary-500 rounded-full"></div>
+                  <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 w-4 h-4 md:w-6 md:h-6 bg-primary-500 rounded-full"></div>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-1">김승원</h4>
+                  <p className="text-sm md:text-base text-primary-600 font-semibold">대표이사 / 김승원</p>
                 </div>
               </div>
-              <div>
-                <h4 className="text-2xl font-bold mb-4 text-primary-600">약력</h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>• 서울대학교 사회학 학사</p>
-                  <p>• University of Oxford (영국) MSc / MPhil Social Anthropology 석사</p>
-                  <p>• Kundle & Co (덴마크 마케팅 에이전시 컨설팅 코)</p>
+
+              {/* 오른쪽: 약력 및 프로젝트 */}
+              <div className="md:col-span-3 space-y-6 md:space-y-8">
+                {/* 약력 섹션 */}
+                <div>
+                  <h4 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary-600 flex items-center">
+                    <span className="w-1.5 md:w-2 h-6 md:h-8 bg-primary-600 mr-2 md:mr-3 rounded-full"></span>
+                    약력
+                  </h4>
+                  <div className="space-y-3 md:space-y-4">
+                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">서울대학교 사회학 학사</p>
+                    </div>
+                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">University of Oxford (영국) MSc / MPhil Social Anthropology 석사</p>
+                    </div>
+                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">Kundle & Co (덴마크 마케팅 에이전시 컨설팅 코)</p>
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-2xl font-bold mt-8 mb-4 text-primary-600">프로젝트</h4>
-                <div className="space-y-3 text-gray-700">
-                  <p>• IKEA &lt;Life at Home Report&gt;</p>
-                  <p className="text-sm text-gray-600 ml-4">(이케아 글로벌 라이프스타일 리서치 프로젝트)</p>
+
+                {/* 프로젝트 섹션 */}
+                <div>
+                  <h4 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary-600 flex items-center">
+                    <span className="w-1.5 md:w-2 h-6 md:h-8 bg-primary-600 mr-2 md:mr-3 rounded-full"></span>
+                    프로젝트
+                  </h4>
+                  <div className="p-4 md:p-6 bg-white rounded-xl border border-gray-100">
+                    <div className="flex items-start space-x-3 md:space-x-4">
+                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm md:text-base text-gray-800 font-semibold mb-1 md:mb-2">IKEA &lt;Life at Home Report&gt;</p>
+                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                          (이케아 글로벌 라이프스타일 리서치 프로젝트)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

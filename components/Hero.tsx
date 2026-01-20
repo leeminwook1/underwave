@@ -35,13 +35,6 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
     }
   ]
 
-  const stats = [
-    { number: '500+', label: '리서치 데이터' },
-    { number: '20+', label: '협업 브랜드' },
-    { number: '50+', label: '20대 에디터' },
-    { number: '100%', label: '고객 만족도' }
-  ]
-
   return (
     <div className="relative bg-white">
       {/* Section 1: Hero */}
@@ -121,7 +114,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
         <div className="absolute top-1/2 right-20 w-24 h-24 bg-primary-100/40 rounded-full blur-2xl opacity-50"></div>
       </section>
 
-      {/* Section 2: What We Do */}
+      {/* Section 2: Who We Are */}
       <section ref={ref1} className="min-h-screen flex items-center py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -132,17 +125,23 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="gradient-text">What We Do</span>
+                <span className="gradient-text">Who We Are</span>
               </h2>
               <p className="text-xl text-gray-700 mb-6">
-                우리는 트렌드를 분석하지만, 목적은 사람에 있습니다.
+                Underwave는 20대 소비자의 실제 일상과 문화 데이터를 기반으로 트렌드를 분석하는 마케팅 에이전시입니다.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                급변하는 흐름 속에서 사람들이 쉽게 놓치는 일상과 문화를 발견하고, 
-                이를 가치 있는 인사이트로 전환합니다. 20대 에디터들과 함께 
-                실제 데이터를 수집하고, 이를 기업의 마케팅 전략으로 연결합니다.
+                트렌드를 분석하지만, 목적은 사람에 있습니다. 
+                SNS 매거진을 통해 수집한 리서치 데이터를 바탕으로 
+                기업의 마케팅 전략과 브랜드 방향성을 제시합니다.
               </p>
               <motion.button
+                onClick={() => {
+                  setActiveTab?.('about')
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'auto' })
+                  }, 0)
+                }}
                 className="flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
                 whileHover={{ x: 10 }}
               >
@@ -169,7 +168,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
         </div>
       </section>
 
-      {/* Section 3: GRAB Project */}
+      {/* Section 3: What We Do */}
       <section ref={ref2} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50/20 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -186,8 +185,8 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
             >
               <div className="aspect-square bg-gradient-to-br from-primary-200 to-primary-300 rounded-3xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" 
-                  alt="GRAB Magazine" 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" 
+                  alt="What we do" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -195,41 +194,123 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
             </motion.div>
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="gradient-text">GRAB Magazine</span>
+                <span className="gradient-text">What We Do</span>
               </h2>
               <p className="text-xl text-gray-700 mb-6">
-                20대 트렌드 매거진
+                우리는 트렌드를 분석하지만, 목적은 사람에 있습니다.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                GRAB은 언더웨이브가 운영하는 20대 트렌드 매거진입니다. 
-                필터버블을 탈피하고 리얼 데이터를 수집하며, 나노트렌드를 조사합니다. 
-                서포터즈 개념의 20대 에디터들이 직접 만들어가는 기록입니다.
+                급변하는 흐름 속에서 사람들이 쉽게 놓치는 일상과 문화를 발견하고, 
+                이를 가치 있는 인사이트로 전환합니다. 20대 에디터들과 함께 
+                실제 데이터를 수집하고, 이를 기업의 마케팅 전략으로 연결합니다.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                  <p className="text-gray-700">마케팅 에이전시 UNDERWAVE의 &apos;20대 트렌드 매거진&apos;</p>
+                  <p className="text-gray-700">마케팅 · 광고 · 홍보 전반 컨설팅</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                  <p className="text-gray-700">필터버블 탈피, 리얼 데이터 수집, 나노트렌드 조사</p>
+                  <p className="text-gray-700">마케팅 대행 및 커뮤니케이션 전략 수립</p>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                  <p className="text-gray-700">서포터즈 개념의 20대 에디터들이 직접 만들어가는 기록</p>
+                  <p className="text-gray-700">트렌드 리서치 리포트 제공</p>
                 </div>
               </div>
+              <motion.button
+                onClick={() => {
+                  setActiveTab?.('mission')
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'auto' })
+                  }, 0)
+                }}
+                className="flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-6"
+                whileHover={{ x: 10 }}
+              >
+                <span>자세히 보기</span>
+                <FaArrowRight />
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 4: Our Approach */}
+      {/* Section 4: How We Work */}
       <section ref={ref3} className="min-h-screen flex items-center py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={inView3 ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="grid md:grid-cols-2 gap-12 items-center"
+          >
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="gradient-text">How We Work</span>
+              </h2>
+              <p className="text-xl text-gray-700 mb-6">
+                데이터와 인사이트를 통해 브랜드의 성공을 이끕니다.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                사회 인스타그램 매거진 운영<br/>
+                20대 자체(에디터) 서포터즈 운영 중<br/>
+                실질 2년(2년 후 공표조사 기획 자체적으로 진행 중)<br/>
+                지대미디어 콘텐츠 기획 자체적으로 진행 중
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                  <p className="text-gray-700">사회 인스타그램 매거진 운영</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                  <p className="text-gray-700">20대 자체(에디터) 서포터즈 운영 중</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
+                  <p className="text-gray-700">실질 2년(2년 후 공표조사 기획 자체적으로 진행 중)</p>
+                </div>
+              </div>
+              <motion.button
+                onClick={() => {
+                  setActiveTab?.('services')
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'auto' })
+                  }, 0)
+                }}
+                className="flex items-center space-x-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors mt-6"
+                whileHover={{ x: 10 }}
+              >
+                <span>자세히 보기</span>
+                <FaArrowRight />
+              </motion.button>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={inView3 ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" 
+                  alt="How we work" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-500/20 rounded-full blur-2xl"></div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 5: Our Approach */}
+      <section ref={ref4} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50/20 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView4 ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -265,7 +346,7 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
               <motion.div
                 key={item.step}
                 initial={{ opacity: 0, y: 50 }}
-                animate={inView3 ? { opacity: 1, y: 0 } : {}}
+                animate={inView4 ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="glass rounded-2xl overflow-hidden hover:shadow-xl transition-all"
                 whileHover={{ y: -10 }}
@@ -285,62 +366,6 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Section 5: Stats */}
-      <section ref={ref4} className="min-h-screen flex items-center py-20 bg-gradient-to-br from-blue-50/20 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView4 ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Our Impact</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              숫자로 보는 언더웨이브
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView4 ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView4 ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="glass p-8 rounded-2xl text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold gradient-text mb-3">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={inView4 ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="relative rounded-3xl overflow-hidden"
-          >
-            <div className="aspect-[21/9] bg-gradient-to-br from-primary-100 to-primary-200">
-              <img 
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80" 
-                alt="Team" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -367,7 +392,9 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
               <motion.button
                 onClick={() => {
                   setActiveTab?.('contact')
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'auto' })
+                  }, 0)
                 }}
                 className="px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-primary-500/90 to-primary-600/90 text-white rounded-full font-semibold text-lg md:text-xl hover:shadow-2xl transition-all"
                 whileHover={{ scale: 1.05 }}
@@ -378,7 +405,9 @@ export default function Hero({ setActiveTab }: HeroProps = {}) {
               <motion.button
                 onClick={() => {
                   setActiveTab?.('about')
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'auto' })
+                  }, 0)
                 }}
                 className="px-8 py-4 md:px-10 md:py-5 glass rounded-full font-semibold text-lg md:text-xl glow-on-hover text-gray-800"
                 whileHover={{ scale: 1.05 }}
