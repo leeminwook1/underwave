@@ -84,7 +84,7 @@ export default function Mission() {
                     그러나 진짜 트렌드는 언제나 눈에 잘 보이지 않는 곳에서 시작됩니다. 사람들이 무심코 고른 색, 이유 없이 끌린 문장, 설명하지 못한 채 남겨둔 감정 같은 아주 작은 선택들 속에 다음 흐름의 씨앗이 숨어 있습니다.
                   </p>
                   <p className="font-semibold text-gray-900">
-                    언더웨이브는 그 '작은 것들'을 기록하는 회사입니다.
+                    언더웨이브는 그 &apos;작은 것들&apos;을 기록하는 회사입니다.
                   </p>
                   <p>
                     설문지보다 거리에서, 보고서보다 대화 속에서, 숫자보다 사람의 표정과 말투에서 트렌드의 시작을 찾습니다.
@@ -93,7 +93,7 @@ export default function Mission() {
                     우리는 메가 트렌드를 쫓지 않습니다. 대신 개인의 일상 속에 숨어 있는 미세한 감정과 행동을 수집하고, 그 축적된 데이터를 통해 다가올 큰 흐름을 미리 읽어냅니다.
                   </p>
                   <p>
-                    마케팅은 더 이상 '보여주는 기술'이 아닙니다. 사람을 이해하고, 사람의 마음을 대신 말해주는 일이어야 합니다.
+                    마케팅은 더 이상 &apos;보여주는 기술&apos;이 아닙니다. 사람을 이해하고, 사람의 마음을 대신 말해주는 일이어야 합니다.
                   </p>
                   <p className="font-semibold text-gray-900">
                     언더웨이브는 소비자를 설득하는 마케팅이 아니라, 소비자에게 공감받는 마케팅을 만들고자 합니다.
@@ -106,7 +106,7 @@ export default function Mission() {
                   </p>
                   <div className="mt-6 pt-6 border-t border-gray-300">
                     <p className="text-sm md:text-base text-gray-600 italic">
-                      "Creating Connected Experiences That Matter."
+                      &quot;Creating Connected Experiences That Matter.&quot;
                     </p>
                   </div>
                 </div>
