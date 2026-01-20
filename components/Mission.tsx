@@ -55,7 +55,7 @@ export default function Mission() {
           </div>
         </motion.div>
 
-        {/* 대표님 소개 */}
+        {/* CEO Message */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -64,72 +64,76 @@ export default function Mission() {
         >
           <div className="text-center mb-8 md:mb-12">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">
-              <span className="gradient-text">대표님 소개</span>
+              <span className="gradient-text">CEO Message</span>
             </h3>
             <div className="w-16 md:w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-600 mx-auto"></div>
           </div>
           
-          <div className="bg-gradient-to-br from-gray-50 to-white p-6 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm">
-            <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
-              {/* 왼쪽: 프로필 이미지 */}
-              <div className="md:col-span-2 flex flex-col items-center">
-                <div className="relative mb-4 md:mb-6">
-                  <div className="w-48 h-60 md:w-64 md:h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
-                    <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" 
-                      alt="CEO" 
-                      className="w-full h-full object-cover"
-                    />
+          <div className="bg-white p-8 md:p-12 lg:p-16 rounded-2xl md:rounded-3xl">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
+              {/* 왼쪽: CEO 메시지 */}
+              <div className="flex-1 max-w-2xl">
+                <h4 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 md:mb-8">
+                  CEO Message
+                </h4>
+                <div className="space-y-4 text-gray-700 leading-relaxed text-sm md:text-base">
+                  <p>
+                    지금의 트렌드는 너무 빠르게 바뀝니다. 겉으로 드러난 유행만 따라가다 보면, 우리는 이미 지나간 파도를 붙잡고 있는지도 모릅니다.
+                  </p>
+                  <p>
+                    그러나 진짜 트렌드는 언제나 눈에 잘 보이지 않는 곳에서 시작됩니다. 사람들이 무심코 고른 색, 이유 없이 끌린 문장, 설명하지 못한 채 남겨둔 감정 같은 아주 작은 선택들 속에 다음 흐름의 씨앗이 숨어 있습니다.
+                  </p>
+                  <p className="font-semibold text-gray-900">
+                    언더웨이브는 그 '작은 것들'을 기록하는 회사입니다.
+                  </p>
+                  <p>
+                    설문지보다 거리에서, 보고서보다 대화 속에서, 숫자보다 사람의 표정과 말투에서 트렌드의 시작을 찾습니다.
+                  </p>
+                  <p>
+                    우리는 메가 트렌드를 쫓지 않습니다. 대신 개인의 일상 속에 숨어 있는 미세한 감정과 행동을 수집하고, 그 축적된 데이터를 통해 다가올 큰 흐름을 미리 읽어냅니다.
+                  </p>
+                  <p>
+                    마케팅은 더 이상 '보여주는 기술'이 아닙니다. 사람을 이해하고, 사람의 마음을 대신 말해주는 일이어야 합니다.
+                  </p>
+                  <p className="font-semibold text-gray-900">
+                    언더웨이브는 소비자를 설득하는 마케팅이 아니라, 소비자에게 공감받는 마케팅을 만들고자 합니다.
+                  </p>
+                  <p>
+                    보이는 파도 아래, 진짜 트렌드는 지금도 조용히 만들어지고 있습니다.
+                  </p>
+                  <p className="font-semibold text-gray-900">
+                    언더웨이브는 그 흐름을 가장 먼저 발견하고, 가장 진심 어린 방식으로 세상에 전하겠습니다.
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-gray-300">
+                    <p className="text-sm md:text-base text-gray-600 italic">
+                      "Creating Connected Experiences That Matter."
+                    </p>
                   </div>
-                  {/* 장식 요소 */}
-                  <div className="absolute -top-2 -left-2 md:-top-3 md:-left-3 w-4 h-4 md:w-6 md:h-6 bg-primary-500 rounded-full"></div>
-                  <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 w-4 h-4 md:w-6 md:h-6 bg-primary-500 rounded-full"></div>
-                </div>
-                <div className="text-center">
-                  <h4 className="text-xl md:text-2xl font-bold text-gray-800 mb-1">김승원</h4>
-                  <p className="text-sm md:text-base text-primary-600 font-semibold">대표이사 / 김승원</p>
                 </div>
               </div>
 
-              {/* 오른쪽: 약력 및 프로젝트 */}
-              <div className="md:col-span-3 space-y-6 md:space-y-8">
-                {/* 약력 섹션 */}
-                <div>
-                  <h4 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary-600 flex items-center">
-                    <span className="w-1.5 md:w-2 h-6 md:h-8 bg-primary-600 mr-2 md:mr-3 rounded-full"></span>
-                    약력
-                  </h4>
-                  <div className="space-y-3 md:space-y-4">
-                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
-                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">서울대학교 사회학 학사</p>
-                    </div>
-                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
-                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">University of Oxford (영국) MSc / MPhil Social Anthropology 석사</p>
-                    </div>
-                    <div className="flex items-start space-x-3 md:space-x-4 p-3 md:p-4 bg-white rounded-xl border border-gray-100">
-                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">Kundle & Co (덴마크 마케팅 에이전시 컨설팅 코)</p>
+              {/* 오른쪽: CEO 이미지 및 프로필 */}
+              <div className="flex-shrink-0">
+                <div className="flex flex-col items-center">
+                  <div className="mb-6">
+                    <div className="w-56 md:w-64 lg:w-72 bg-white rounded-lg overflow-hidden">
+                      <img 
+                        src="/images/CEO.png" 
+                        alt="CEO 김승원" 
+                        className="w-full h-auto object-contain"
+                      />
                     </div>
                   </div>
-                </div>
-
-                {/* 프로젝트 섹션 */}
-                <div>
-                  <h4 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-primary-600 flex items-center">
-                    <span className="w-1.5 md:w-2 h-6 md:h-8 bg-primary-600 mr-2 md:mr-3 rounded-full"></span>
-                    프로젝트
-                  </h4>
-                  <div className="p-4 md:p-6 bg-white rounded-xl border border-gray-100">
-                    <div className="flex items-start space-x-3 md:space-x-4">
-                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                      <div>
-                        <p className="text-sm md:text-base text-gray-800 font-semibold mb-1 md:mb-2">IKEA &lt;Life at Home Report&gt;</p>
-                        <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                          (이케아 글로벌 라이프스타일 리서치 프로젝트)
-                        </p>
-                      </div>
+                  <div className="text-center space-y-3 w-full max-w-[288px]">
+                    <div>
+                      <p className="text-lg md:text-xl font-bold text-gray-900">김승원</p>
+                      <p className="text-sm md:text-base text-primary-600 font-semibold">언더웨이브 대표이사</p>
+                    </div>
+                    <div className="pt-3 border-t border-gray-300 text-left space-y-1.5 text-xs md:text-sm text-gray-600">
+                      <p>• 서울대학교 사회학 학사</p>
+                      <p>• University of Oxford (영국)<br/>&nbsp;&nbsp;MSc / MPhil Social<br/>&nbsp;&nbsp;Anthropology 석사</p>
+                      <p>• Kundle & Co<br/>&nbsp;&nbsp;(덴마크 마케팅 에이전시<br/>&nbsp;&nbsp;컨설팅 코)</p>
+                      <p>• IKEA &lt;Life at Home<br/>&nbsp;&nbsp;Report&gt; 프로젝트</p>
                     </div>
                   </div>
                 </div>
