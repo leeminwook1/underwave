@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Underwave | 언더웨이브 - 20대 트렌드 마케팅 에이전시',
   description: '20대 트렌드 매거진',
-  keywords: ['Underwave', '언더웨이브', 'GRAB', '그랩', '20대 트렌드', '마케팅 에이전시', '트렌드 매거진', '마케팅 컨설팅', 'SNS 마케팅', '브랜디드 콘텐츠'],
+  keywords: ['Underwave', '언더웨이브', '20대 트렌드', '마케팅 에이전시', '트렌드 매거진', '마케팅 컨설팅', 'SNS 마케팅', '브랜디드 콘텐츠'],
 }
 
 export const viewport: Viewport = {

@@ -5,11 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import { FaArrowRight, FaTag } from 'react-icons/fa'
 import { useState } from 'react'
 
-interface ProjectsProps {
-  setActiveTab?: (tab: string) => void
-}
-
-export default function Projects({ setActiveTab }: ProjectsProps = {}) {
+export default function Projects() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -27,16 +23,6 @@ export default function Projects({ setActiveTab }: ProjectsProps = {}) {
   ]
 
   const projects = [
-    {
-      id: 0,
-      title: 'GRAB (그랩)',
-      category: 'content',
-      client: '20대 에디터 서포터즈',
-      description: '20대 트렌드 매거진 - 필터버블 탈피, 리얼 데이터 수집, 나노트렌드 조사',
-      image: '/images/grab.png',
-      tags: ['트렌드 매거진', '20대', 'SNS'],
-      isGrab: true,
-    },
     {
       id: 1,
       title: '20대 뷰티 트렌드 리서치',
@@ -287,14 +273,6 @@ export default function Projects({ setActiveTab }: ProjectsProps = {}) {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className="group cursor-pointer"
               whileHover={{ y: -10 }}
-              onClick={() => {
-                if (project.isGrab) {
-                  setActiveTab?.('grab')
-                  setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'auto' })
-                  }, 0)
-                }
-              }}
             >
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all border border-gray-100">
                 {/* Image */}

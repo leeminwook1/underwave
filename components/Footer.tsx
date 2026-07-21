@@ -47,7 +47,7 @@ export default function Footer({ activeTab, setActiveTab }: FooterProps) {
               Underwave
             </motion.h3>
             <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
-              20대 트렌드 매거진 GRAB을 운영하는
+              20대 트렌드를 만드는
               <br />
               마케팅 에이전시 언더웨이브입니다.
             </p>

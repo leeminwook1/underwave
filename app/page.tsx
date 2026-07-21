@@ -7,7 +7,6 @@ import About from '@/components/About'
 import Mission from '@/components/Mission'
 import Services from '@/components/Services'
 import Projects from '@/components/Projects'
-import Grab from '@/components/Grab'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Cursor from '@/components/Cursor'
@@ -56,9 +55,7 @@ export default function Home() {
       case 'services':
         return <Services />
       case 'projects':
-        return <Projects setActiveTab={setActiveTab} />
-      case 'grab':
-        return <Grab />
+        return <Projects />
       case 'contact':
         return <Contact />
       default:
